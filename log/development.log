@@ -1,0 +1,90 @@
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacters (20230628002742)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "characters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "house" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230628002742"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (7.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-06-28 00:32:04.610361"], ["updated_at", "2023-06-28 00:32:04.610361"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Load (2.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mCharacter Load (3.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Argus Filch"], ["location", "Azkaban"], ["house", "Slytherin"], ["created_at", "2023-06-28 00:36:30.961569"], ["updated_at", "2023-06-28 00:36:30.961569"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (8.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lavender Brown"], ["location", "Gladrags Wizardwear"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:30.981218"], ["updated_at", "2023-06-28 00:36:30.981218"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ted Tonks"], ["location", "Potage's Cauldron Shop"], ["house", "Hufflepuff"], ["created_at", "2023-06-28 00:36:31.002710"], ["updated_at", "2023-06-28 00:36:31.002710"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (5.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Luna Lovegood"], ["location", "Madam Puddifoot's"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:31.023815"], ["updated_at", "2023-06-28 00:36:31.023815"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (5.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kreacher"], ["location", "Gringotts Wizarding Bank"], ["house", "Pukwudgie"], ["created_at", "2023-06-28 00:36:31.042378"], ["updated_at", "2023-06-28 00:36:31.042378"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Myrtle Warren"], ["location", "Number 12, Grimmauld Place"], ["house", "Slytherin"], ["created_at", "2023-06-28 00:36:31.062721"], ["updated_at", "2023-06-28 00:36:31.062721"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (8.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Irma Prince"], ["location", "The Hog's Head"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:31.083247"], ["updated_at", "2023-06-28 00:36:31.083247"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Irma Prince"], ["location", "Ollivanders"], ["house", "Ravenclaw"], ["created_at", "2023-06-28 00:36:31.105671"], ["updated_at", "2023-06-28 00:36:31.105671"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (7.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Katie Bell"], ["location", "Little Hangleton"], ["house", "Horned Serpent"], ["created_at", "2023-06-28 00:36:31.126498"], ["updated_at", "2023-06-28 00:36:31.126498"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Regulus Arcturus Black"], ["location", "Madam Puddifoot's"], ["house", "Hufflepuff"], ["created_at", "2023-06-28 00:36:31.146709"], ["updated_at", "2023-06-28 00:36:31.146709"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (5.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dennis Creevey"], ["location", "Weasleys' Wizard Wheezes"], ["house", "Wampus"], ["created_at", "2023-06-28 00:36:31.165871"], ["updated_at", "2023-06-28 00:36:31.165871"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ginny Weasley"], ["location", "Beauxbatons"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:31.184093"], ["updated_at", "2023-06-28 00:36:31.184093"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ginny Weasley"], ["location", "Platform 9 3/4"], ["house", "Hufflepuff"], ["created_at", "2023-06-28 00:36:31.204372"], ["updated_at", "2023-06-28 00:36:31.204372"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (5.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rolanda Hooch"], ["location", "St. Mungo's Hospital for Magical Maladies and Injuries"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:31.223655"], ["updated_at", "2023-06-28 00:36:31.223655"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Augusta Longbottom"], ["location", "Hogsmeade Station"], ["house", "Gryffindor"], ["created_at", "2023-06-28 00:36:31.242510"], ["updated_at", "2023-06-28 00:36:31.242510"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bogrod"], ["location", "Magical Menagerie"], ["house", "Wampus"], ["created_at", "2023-06-28 00:36:31.264099"], ["updated_at", "2023-06-28 00:36:31.264099"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (8.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Newt Scamander"], ["location", "Zonko's Joke Shop"], ["house", "Slytherin"], ["created_at", "2023-06-28 00:36:31.283919"], ["updated_at", "2023-06-28 00:36:31.283919"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (7.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bathsheda Babbling"], ["location", "Borgin & Burkes"], ["house", "Thunderbird"], ["created_at", "2023-06-28 00:36:31.303927"], ["updated_at", "2023-06-28 00:36:31.303927"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (6.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cormac McLaggen"], ["location", "Knockturn Alley"], ["house", "Pukwudgie"], ["created_at", "2023-06-28 00:36:31.327853"], ["updated_at", "2023-06-28 00:36:31.327853"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCharacter Create (7.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Godric Gryffindor"], ["location", "Quality Quidditch Shop"], ["house", "Pukwudgie"], ["created_at", "2023-06-28 00:36:31.345884"], ["updated_at", "2023-06-28 00:36:31.345884"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCharacter Load (2.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+Started GET "/" for 10.0.2.2 at 2023-06-28 00:43:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (6.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:13
+  Rendered pages/index.html.erb within layouts/application (Duration: 174.5ms | Allocations: 6365)
+  Rendered layout layouts/application.html.erb (Duration: 7842.4ms | Allocations: 95244)
+Completed 200 OK in 10776ms (Views: 7910.0ms | ActiveRecord: 36.7ms | Allocations: 378527)
+
+
